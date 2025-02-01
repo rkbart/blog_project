@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   resources :posts
   get "/posts/new" => "posts#new"
+  get "/posts/:id/edit" => "posts#edit"
   get "/posts/:id" => "posts#show"
+  patch "/posts/:id" => "posts#update"
   post "/posts" => "posts#create" ##pluralized if no id
-
-   root "posts#index"
+  root "posts#index"
 end
