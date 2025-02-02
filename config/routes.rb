@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :posts #this line replaces all the routes below
+  resources :posts do #this line replaces all the routes below
+    resources :comments, only: [:create, :destroy]
+  end
   
   # get "/posts/new" => "posts#new"
   # get "/posts/:id/edit" => "posts#edit"
@@ -12,4 +14,6 @@ Rails.application.routes.draw do
   # post "/posts" => "posts#create" 
   
   root "posts#index"
+
+
 end
