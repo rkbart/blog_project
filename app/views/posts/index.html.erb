@@ -6,6 +6,7 @@
 <% @posts.each do |post| %>
     <div class="post-index">
         <h2><%= link_to post.title, post %></h2>
+        <p class="created-at"><%= post.created_at %></p>
         <p><%= post.body %></p>
     </div>
 <% end %>

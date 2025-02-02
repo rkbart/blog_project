@@ -1,0 +1,24 @@
+<h2 class="login-title">Login</h2>
+
+<div class="login-container">
+  <%= form_for(resource, 
+               as: resource_name, 
+               url: session_path(resource_name), 
+               html: { class: "login-form" }) do |f| 
+  %>
+
+    <div class="login-form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "login-input-field" %>
+    </div>
+
+    <div class="login-form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "login-input-field" %>
+    </div>
+
+    <div class="login-form-actions">
+      <%= f.submit "Log in", class: "login-button" %>
+    </div>
+  <% end %>
+</div>
