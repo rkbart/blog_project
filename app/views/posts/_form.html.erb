@@ -19,7 +19,10 @@
     <p>
     <%= form.submit "Submit", class: "form-submit" %>
     <% if show_delete_button %>
-      <%= button_to "Delete Post", @post, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+      <%= button_to "Delete Post", post_path(@post), 
+                                   method: :delete, 
+                                   data: { turbo_confirm: "Are you sure?", turbo: false }, 
+                                   class: "delete-post-btn" %>
     <% end %>
     </p>
   <% end %>

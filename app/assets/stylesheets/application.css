@@ -128,31 +128,33 @@ form {
   }
 
   .edit {
-    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .comment-form-container form{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     background: #f9f9f9;
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 8px;
     margin-top: 20px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     width: 500px;
   }
   
-  .comment-form h3 {
-    margin-bottom: 10px;
+  .comment-form-container h3 {
+    margin-bottom: -1.5rem;
     font-size: 20px;
     color: #333;
-    
+    margin-left: 1rem;
   }
   
   .comment-form-container .form-group {
-    /* margin-bottom: 10px; */
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -164,6 +166,7 @@ form {
     color: #555;
     font-size: 16px;
     width: 100%;
+    margin-bottom: -1rem;
   }
   
   .comment-form-container .form-input, .comment-form-container .form-textarea {
@@ -194,4 +197,12 @@ form {
   .delete-comment-link {
     font-size: 12px;
     margin-bottom: 1rem;
+  }
+
+  .comments-div {
+    margin-bottom: 1rem;
+  }
+
+  .comments-div p {
+    /* text-align: ; */
   }

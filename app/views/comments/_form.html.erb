@@ -1,5 +1,7 @@
 <div class="comment-form-container">
-  <h3>Add a Comment:</h3>
+<hr style="border: none; height: 2px; background-color: gray; margin-bottom: 1rem; ">
+
+<h3>Add a Comment:</h3>
 
   <%= form_with model: [@post, Comment.new], local: true, class: "comment-form" do |form| %>
     <div class="form-group">

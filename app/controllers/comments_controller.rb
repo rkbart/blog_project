@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+    
     def create
         @post = Post.find(params[:post_id])
         @comment = @post.comments.build(comment_params)  ##use build instead create so it would not save to the database yet
