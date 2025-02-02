@@ -1,22 +1,25 @@
 <%= form_with model: @post do |form | %>
     <% if form.object.errors.any? %>
-      <div>
+      <div class="error-messages">
           <% form.object.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
+              <li class="error-message"><%= msg %></li>
           <% end %>
       </div>
     <% end %>
     <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
+      <%= form.label :title, class: "form-label" %><br>
+      <%= form.text_field :title, class: "form-input" %>
     </p>
   
     <p>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %>
+      <%= form.label :body, class: "form-label" %><br>
+      <%= form.text_area :body, class: "form-textarea" %>
     </p>
   
     <p>
-      <%= form.submit %>
+    <%= form.submit "Submit", class: "form-submit" %>
+    <% if show_delete_button %>
+      <%= button_to "Delete Post", @post, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
+    <% end %>
     </p>
   <% end %>

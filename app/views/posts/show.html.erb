@@ -1,3 +1,6 @@
-<%= link_to "Edit", edit_post_path(@post) if user_signed_in? %>
-<h1><%= @post.title %></h1>
-<%= @post.body %>
+<h1 class="blog-title"><%= @post.title %></h1>
+<p class="blog-text"><%= @post.body %></p>
+<div class ="edit">
+    <%= link_to "Edit", edit_post_path(@post) if user_signed_in? %>
+    <%= link_to "Back", root_path %>
+</div>

@@ -1,8 +1,13 @@
-<h1>My Blog</h1>
+<div style="text-align: center; margin-top: 20px;">
+    <h1>PostHub</h1>
+    <h3>A simple blog project using Ruby on Rails</h3>
+</div>
 
 <% @posts.each do |post| %>
-    <div class="post">
+    <div class="post-index">
         <h2><%= link_to post.title, post %></h2>
         <p><%= post.body %></p>
     </div>
 <% end %>
+
+<%= link_to "Create New Post", new_post_path, class: "new-post-btn" %>

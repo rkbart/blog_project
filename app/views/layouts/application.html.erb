@@ -18,22 +18,26 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
+  <body >
+  
+  <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div>
+    
+    <%= yield %>
+    <div class="header">
+    
       <% if user_signed_in? %>
         
-        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "logout-btn" %>
       
       <% end %>
     </div>
-    
-    <%= yield %>
   </body>
 </html>
