@@ -13,8 +13,6 @@ user.update!(
     password_confirmation: "password123"
 )
 
-# db/seeds.rb
-
 Post.create([
   {
     title: "The Future of Web Development",

@@ -3,7 +3,7 @@
     <h3>A simple blog project using Ruby on Rails</h3>
 </div>
 
-<% @posts.each do |post| %>
+<% @posts.reverse.each do |post| %>
     <div class="post-index">
         <h2><%= link_to post.title, post %></h2>
         <p class="created-at">
