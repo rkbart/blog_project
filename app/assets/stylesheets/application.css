@@ -271,3 +271,27 @@ form {
   color: red;
 }
 
+a {
+  /* add your styles here */
+  color: black;
+  /* text-decoration: none; */
+}
+
+.header-title-post {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: black; /* Black text for "Post" */
+  display: inline;
+}
+
+.header-title-hub {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: white; /* White text for "Hub" */
+  background-color: #FF9900; /* Orange background */
+  padding: 5px 10px;
+  border-radius: 5px; /* Optional: Smooth corners */
+  display: inline-block;
+}
