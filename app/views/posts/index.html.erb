@@ -6,7 +6,8 @@
 <% @posts.each do |post| %>
     <div class="post-index">
         <h2><%= link_to post.title, post %></h2>
-        <p class="created-at"><%= post.created_at.in_time_zone(Time.zone.name).strftime("%m-%d-%y %I:%M") %></p>
+        <p class="created-at">
+            <%= post.created_at.in_time_zone(Time.zone.name).strftime("%m-%d-%y %I:%M") %></p>
         <p><%= post.body %></p>
     </div>
 <% end %>
